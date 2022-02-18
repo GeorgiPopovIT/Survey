@@ -16,7 +16,7 @@ namespace Survey.Web.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateSurvey(int? a)
+        public IActionResult CreateSurvey(int a = 5)
         {
             return null;
         }
