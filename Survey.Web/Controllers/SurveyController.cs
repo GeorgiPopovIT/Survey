@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Survey.Web.ViewModels.Survey;
 
 namespace Survey.Web.Controllers
 {
@@ -12,12 +13,17 @@ namespace Survey.Web.Controllers
 
         public IActionResult CreateSurvey()
         {
-            return null;
+            return View();
         }
 
         [HttpPost]
-        public IActionResult CreateSurvey(int a = 5)
+        public IActionResult CreateSurvey(SurveyInputModel model)
         {
+
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
             return null;
         }
     }
